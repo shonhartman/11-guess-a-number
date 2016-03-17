@@ -23,8 +23,7 @@ import readlineSync from 'readline-sync';
  */
 
 export function generateNumber() {
-  // YOUR CODE HERE
-  // BE SURE IT'S AN INTEGER OR YOU WILL BE SAD
+  return Math.floor(Math.random() * (100)) + 1;
 }
 
 /**
@@ -41,7 +40,7 @@ export function generateNumber() {
  */
 
 export function getUserGuess() {
-	// YOUR CODE HERE
+  var whatNumber = readlineSync.question('What is the number?');
 }
 
 /**
@@ -55,8 +54,26 @@ export function getUserGuess() {
  */
 
 export function isRightNumber(correctNumber, userGuess) {
-  // YOUR CODE HERE
+  var correctNumber = generateNumber();
+  var userGuess = whatNumber;
+
+  if (userGuess === generateNumber) {
+    return true;
+  }
+
+  if else(userGuess < correctNumber) {
+    console.log 'too low';
+  }
+
+  if else(userGuess > correctNumber) {
+    console.log 'too high';
+  }
+
+  else {
+    return false;
+  }
 }
+
 
 /**
  * Now that we have the pieces of our game defined,
@@ -86,12 +103,35 @@ export function isRightNumber(correctNumber, userGuess) {
  */
 
 function runGame() {
-	// DISPLAY WELCOME BANNER
+  function generateNumber() {
+    return Math.floor(Math.random() * (100)) + 1;
+  }
 
-	// STORE INITIAL GAME STATE
+  function getUserGuess() {
+    var whatNumber = readlineSync.question('What is the number?');
 
-	// WHILE LOOP FOR WHEN GAME IS NOT WON
-}
+  console.log 'Guess my number, 1-100!';
+
+  function isRightNumber(correctNumber, userGuess) {
+    var correctNumber = generateNumber();
+    var userGuess = whatNumber;
+
+    if (userGuess === generateNumber) {
+      return true;
+    }
+
+    if else(userGuess < correctNumber) {
+      console.log 'too low';
+    }
+
+    if else(userGuess > correctNumber) {
+      console.log 'too high';
+    }
+
+    else {
+      return false;
+    }
+  }
 
 /**
  * Finally, we call our runGame function so that
