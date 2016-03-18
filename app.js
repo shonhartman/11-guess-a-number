@@ -41,6 +41,8 @@ export function generateNumber() {
 
 export function getUserGuess() {
   var whatNumber = readlineSync.question('What is the number?');
+
+  return whatNumber;
 }
 
 /**
@@ -102,35 +104,23 @@ export function isRightNumber(correctNumber, userGuess) {
  * congratulatory message for winning the game.
  */
 
-function runGame() {
-  function generateNumber() {
-    return Math.floor(Math.random() * (100)) + 1;
-  }
-
-  function getUserGuess() {
-    var whatNumber = readlineSync.question('What is the number?');
 
   console.log 'Guess my number, 1-100!';
-
-  function isRightNumber(correctNumber, userGuess) {
-    var correctNumber = generateNumber();
-    var userGuess = whatNumber;
 
     if (userGuess === generateNumber) {
       return true;
     }
 
-    if else(userGuess < correctNumber) {
-      console.log 'too low';
+    else if(userGuess < correctNumber) {
+      console.log('too low');
     }
 
-    if else(userGuess > correctNumber) {
-      console.log 'too high';
+    else if(userGuess > correctNumber) {
+      console.log('too high');
     }
 
-    else {
       return false;
-    }
+
   }
 
 /**
