@@ -63,12 +63,12 @@ export function isRightNumber(correctNumber, userGuess) {
     return true;
   }
 
-  if else(userGuess < correctNumber) {
-    console.log 'too low';
+  else if(userGuess < correctNumber) {
+    console.log('too low');
   }
 
-  if else(userGuess > correctNumber) {
-    console.log 'too high';
+  else if(userGuess > correctNumber) {
+    console.log('too high');
   }
 
   else {
@@ -104,24 +104,17 @@ export function isRightNumber(correctNumber, userGuess) {
  * congratulatory message for winning the game.
  */
 
+function runGame() {
 
-  console.log 'Guess my number, 1-100!';
+  console.log('Guess my number, 1-100!');
 
-    if (userGuess === generateNumber) {
-      return true;
-    }
 
-    else if(userGuess < correctNumber) {
-      console.log('too low');
-    }
+  while (userGuess !== generateNumber) {
 
-    else if(userGuess > correctNumber) {
-      console.log('too high');
-    }
-
-      return false;
+    isRightNumber++;
 
   }
+}
 
 /**
  * Finally, we call our runGame function so that
