@@ -106,14 +106,21 @@ export function isRightNumber(correctNumber, userGuess) {
 
 function runGame() {
 
-  console.log('Guess my number, 1-100!');
+    console.log('Guess my number, 1-100!');
+
+  var correctNumber = generateNumber();
+  var userGuess = getUserGuess();
+  var gotIt = false;
 
 
-  while (userGuess !== generateNumber) {
+  while (userGuess !== correctNumber) {
 
     isRightNumber++;
 
   }
+
+  gotIt == true;
+  console.log("You guessed it!")
 }
 
 /**
