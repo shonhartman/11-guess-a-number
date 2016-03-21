@@ -72,7 +72,7 @@ export function isRightNumber(correctNumber, userGuess) {
   }
 
   else {
-    return false;
+    return true;
   }
 }
 
