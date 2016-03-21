@@ -71,9 +71,6 @@ export function isRightNumber(correctNumber, userGuess) {
     return false;
   }
 
-  else {
-    return true;
-  }
 }
 
 
@@ -114,6 +111,7 @@ function runGame() {
   while (!gotIt) {
 
     var userGuess = getUserGuess();
+    var gotIt = isRightNumber(correctNumber, userGuess);
 
 if (gotIt) {
   console.log("You guessed it!")
