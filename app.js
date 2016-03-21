@@ -61,12 +61,14 @@ export function isRightNumber(correctNumber, userGuess) {
     return true;
   }
 
-  else if(userGuess < correctNumber) {
+  else if(Number(userGuess) < correctNumber) {
     console.log('too low');
+    return false;
   }
 
-  else if(userGuess > correctNumber) {
+  else if(Number(userGuess) > correctNumber) {
     console.log('too high');
+    return false;
   }
 
   else {
