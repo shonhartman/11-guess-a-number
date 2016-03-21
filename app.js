@@ -56,10 +56,8 @@ export function getUserGuess() {
  */
 
 export function isRightNumber(correctNumber, userGuess) {
-  var correctNumber = generateNumber();
-  var userGuess = whatNumber;
 
-  if (userGuess === generateNumber) {
+  if (Number(userGuess) === correctNumber) {
     return true;
   }
 
@@ -109,18 +107,17 @@ function runGame() {
     console.log('Guess my number, 1-100!');
 
   var correctNumber = generateNumber();
-  var userGuess = getUserGuess();
   var gotIt = false;
 
+  while (!gotIt) {
 
-  while (userGuess !== correctNumber) {
+    var userGuess = getUserGuess();
 
-    isRightNumber++;
-
+if (gotIt) {
+  console.log("You guessed it!")
+}
   }
 
-  gotIt == true;
-  console.log("You guessed it!")
 }
 
 /**
